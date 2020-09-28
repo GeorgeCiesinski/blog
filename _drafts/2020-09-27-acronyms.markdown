@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Acronyms"
+date:   2020-09-27 20:00:00 -0500
+categories: acronyms
+---
+
+Update everything on this page. Research the below links, and if any of them make sense, write the blog about them.
+
+[KISS-principle]: https://en.wikipedia.org/wiki/KISS_principle
+[Don't-Repeat-Yourself]:   https://en.wikipedia.org/wiki/Don%27t_repeat_yourself#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,data%20normalization%20to%20avoid%20redundancy.
+[SOLID]: https://en.wikipedia.org/wiki/SOLID
