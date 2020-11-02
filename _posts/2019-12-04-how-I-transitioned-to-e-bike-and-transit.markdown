@@ -2,7 +2,7 @@
 layout: single
 title:  "How I transitioned to E-bike and Transit"
 date:   2019-12-03 19:30:00 -0500
-categories: cycling health 
+categories: Cycling Health 
 ---
 
 Hi anybody who actually reads this blog! I know that this blog is mainly for my programming and I haven't posted anything programming related on here yet, but I promise it is coming! I actually have a few planned blog posts about topics such as git flow, matrices, and convolution planned. I just have to get around to actually writing these. 

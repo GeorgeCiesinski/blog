@@ -2,7 +2,7 @@
 layout: single
 title:  "Introduction to Git"
 date:   2019-12-30 23:00:00 -0500
-categories: git github
+categories: Git Github
 comments: true
 ---
 

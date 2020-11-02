@@ -2,7 +2,7 @@
 layout: single
 title:  "My first blog post!"
 date:   2019-11-22 21:30:00 -0500
-categories: jekyll github
+categories: Jekyll Github
 ---
 Hi All, 
 
