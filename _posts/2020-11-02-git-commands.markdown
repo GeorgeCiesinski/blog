@@ -6,8 +6,6 @@ categories: Programming Commands GitHub
 comments: true
 ---
 
-# Git Commands
-
 ## git init
 
 Starts a new repository.

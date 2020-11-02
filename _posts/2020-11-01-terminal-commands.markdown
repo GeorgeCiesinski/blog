@@ -6,8 +6,6 @@ categories: Programming Commands
 comments: true
 ---
 
-# Unix & Linux Commands
-
 ## cd
 
 Change directory
