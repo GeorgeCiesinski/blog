@@ -6,6 +6,8 @@ categories: Programming Commands GitHub
 comments: true
 ---
 
+I have compiled useful git commands in this post, and will update it as I find more.
+
 ## git init
 
 Starts a new repository.

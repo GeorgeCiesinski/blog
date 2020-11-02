@@ -6,6 +6,8 @@ categories: Programming Commands
 comments: true
 ---
 
+I have compiled useful Linux / Unix commands in this post, and will update it as I find more.
+
 ## cd
 
 Change directory
