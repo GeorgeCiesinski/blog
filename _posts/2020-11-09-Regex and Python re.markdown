@@ -36,7 +36,7 @@ Match is anchored to the beginning of the string, so it will only find a pattern
 
 [Source](https://docs.python.org/3/library/re.html)
 
-```
+```python
 re.match(regex, element)
 ```
 
