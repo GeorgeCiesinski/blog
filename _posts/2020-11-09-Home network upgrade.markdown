@@ -12,15 +12,15 @@ I found a set of routers called TP-Link Deco and specifically purchased the M4 m
 
 Setup was extremely easy. The box contained three tower routers, and three power adapters. 
 
-<img src="/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/DecoM4.jpg" alt="DecoM4" style="zoom:50%;" />
+<img src="/assets/images/Network Upgrade/DecoM4.jpg" alt="DecoM4" style="zoom:50%;" />
 
 Each tower was plugged into power and placed across the apartment. One router was plugged into the modem with a regular ethernet cable. Finally, all I had to do was open the Deco app on iOS and connect to the master router. The app asked me to create an accout, which although inconvenient at first, made sense considering you want to lock administrator access like with any other router. Then, it asked me to create an SSID & Password. Once this information was entered, the network was up and running. There was an option to add the remaining routers, which was as simple as entering the last four characters of the SSID printed on each one. After a few minutes, all routers were connected, and the app showed: All Decos are online: Master Bedroom, Bedroom, Livingroom. 
 
-<img src="/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/IMG_0766.png" alt="IMG_0766" style="zoom: 33%;" />
+<img src="/assets/images/Network Upgrade/IMG_0766.png" alt="IMG_0766" style="zoom: 33%;" />
 
 As each device connected to the network, a notifacation came on advising that a new device has connected to the network, which was amazing. Living in an apartment building, I have had my suspicions in the past that somebody had connected to the home network from another apartment. Now I could see as soon as an unknown device joined. 
 
-<img src="/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/IMG_0767.png" alt="IMG_0767" style="zoom:33%;" />
+<img src="/assets/images/Network Upgrade/IMG_0767.png" alt="IMG_0767" style="zoom:33%;" />
 
 The app also allowed for easily updating all the Decos with the latest firmware at the push of a button. I let this process run which took somewhere between 2 and 5 minutes. One additional feature I thought was pretty cool is that if you go into the Deco status, you can click each router and see which devices are connected to which tower. This would probably be helpful for potential troubleshooting some day.
 
@@ -30,11 +30,11 @@ Once the network was up and running, I ran a speed test to compare the differenc
 
 ### Old
 
-<img src="/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/Screen Shot 2020-11-08 at 3.26.56 PM.png" alt="Original Speed" style="zoom: 50%;" />
+<img src="/assets/images/Network Upgrade/Screen Shot 2020-11-08 at 3.26.56 PM.png" alt="Original Speed" style="zoom: 50%;" />
 
 ### New
 
-<img src="/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/Screen Shot 2020-11-08 at 3.28.37 PM.png" alt="Screen Shot 2020-11-08 at 3.28.37 PM" style="zoom:50%;" />
+<img src="/assets/images/Network Upgrade/Screen Shot 2020-11-08 at 3.28.37 PM.png" alt="Screen Shot 2020-11-08 at 3.28.37 PM" style="zoom:50%;" />
 
 The macbook results were the least impressive, but still a massive improvement. The speed almost doubled, although there was an additional 2ms of ping. I don't know if this is a usual fluctuation, or if the routers are actually slower, although I doubt I would notice 2ms. 
 
@@ -42,11 +42,11 @@ The macbook results were the least impressive, but still a massive improvement. 
 
 ### Old
 
-![predeco](/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/predeco.jpg)
+![predeco](/assets/images/Network Upgrade/predeco.jpg)
 
 ### New
 
-![postdeco](/Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/assets/images/Network Upgrade/postdeco.jpg)
+![postdeco](/assets/images/Network Upgrade/postdeco.jpg)
 
 The PC results are a bit quicker with the speed more than doubling to 88Mbps, and the ping remaining at 13ms. This is likely due to the PC being directly beside the router, while the Macbook is not.
 
