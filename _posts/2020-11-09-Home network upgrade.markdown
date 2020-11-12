@@ -4,6 +4,7 @@ title:  "Home Network Upgrade"
 date:   2020-11-10 00:30:00 -0500
 categories: Network
 comments: true
+typora-root-url: /Users/gciesinski/Documents/Repos/GeorgeCiesinski.github.io/
 ---
 
 I wanted to make a non programming related post and talk about my recent home network upgrade. I have been using a set of Asus routers for almost the past 10 years. One router was chained to the other in a master/slave configuration and were connected by an ethernet cable running across the apartment. There was a number of issues with this method. First, only the master router was capable of a 5G connection. As the 5G bandwidth is very short range, I could not access this from one half of the apartment. Second, there were massive cables running across the hallways ceilings, and around the living room. No matter how I tried to hide it, it looked pretty bad. I decided that it was time for an upgrade. I also want to make it clear that I was not asked to make the review, and that I felt compelled to not only because the product impressed me at first glance, but because I wanted to mix up my post topics a bit as well. 
@@ -12,7 +13,7 @@ I found a set of routers called TP-Link Deco and specifically purchased the M4 m
 
 Setup was extremely easy. The box contained three tower routers, and three power adapters. 
 
-<img src="/assets/images/Network Upgrade/DecoM4.jpg" alt="DecoM4" style="zoom:50%;" />
+![decom4](/assets/images/Network Upgrade/DecoM4.jpg)
 
 Each tower was plugged into power and placed across the apartment. One router was plugged into the modem with a regular ethernet cable. Finally, all I had to do was open the Deco app on iOS and connect to the master router. The app asked me to create an accout, which although inconvenient at first, made sense considering you want to lock administrator access like with any other router. Then, it asked me to create an SSID & Password. Once this information was entered, the network was up and running. There was an option to add the remaining routers, which was as simple as entering the last four characters of the SSID printed on each one. After a few minutes, all routers were connected, and the app showed: All Decos are online: Master Bedroom, Bedroom, Livingroom. 
 
