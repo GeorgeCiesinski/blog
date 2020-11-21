@@ -39,9 +39,9 @@ A comprehensive library for creating static, animated, and interactive visualiza
 
 A library that serializes and deserializes a Python object structure. Serialization, or "pickling" converts an object into a bytestream, and deserialization, or "unpickling" converts a bytestream into an object. This library is not secure and should only be used on data you trust.
 
-# Plotting
+# Plotting with matplotlib
 
-## Column Chart with matplotlib
+## Column Chart
 
 You can plot data into a column chart using the below code snippet:
 
@@ -75,5 +75,40 @@ plt.show()  # Shows the bar chart
 
 This code results in the below column chart:
 
-![ColumnChart](/assets/images/Data Visualization/ColumnChart.png)
+<img src="/assets/images/Data Visualization/ColumnChart.png" alt="ColumnChart" style="zoom:50%;" />
 
+## Horizontal Bar Chart
+
+You can plot data into a horizontal bar chart using the below code snippet:
+
+```python
+import matplotlib.pyplot as plt
+import pickle
+
+# Load Data
+with open('coding-exp-by-dev-type.pickle', 'rb') as f:
+    data = pickle.load(f)
+    
+# Split into two lists
+dev_types, years_exp = zip(*data)
+
+'''
+Plotting the data in a bar chart
+
+Horizontal Bar charts are also great for plotting categorical data
+'''
+bar_coords = range(len(dev_types))
+plt.barh(bar_coords, years_exp)  # Plot a horizontal bar chart
+plt.yticks(bar_coords, dev_types, fontsize=8)
+plt.tight_layout()  # Tightens the layout, eliminating white space
+
+# Chart Annotations
+plt.title('Years of Coding Experience by Developer Type')
+plt.xlabel('Years')
+
+plt.show()
+```
+
+This code results in the below column chart:
+
+<img src="/assets/images/Data Visualization/HorizontalBarChart.png" alt="HorizontalBarChart" style="zoom:50%;" />
