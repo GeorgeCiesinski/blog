@@ -4,6 +4,7 @@ title:  "Data Visualization with Python"
 date:   2020-11-21 23:00:00 -0500
 categories: Programming Python Data
 comments: true
+typora-root-url: ..
 ---
 
 Hi everyone/noone. I realize that probably nobody reads these blog posts at this time, but I have found enormous value in writing these posts as I have been learning a lot by writing these. Today's post is about visualizing data using Python, Anaconda, Matplotlib, Seaborn, & Bokeh. The information in this post is based off of a number of sources including "The Complete Python Data Visualization Course" tutorial by Zenva, wikipedia for definitions, and some other supplemental sources whenever I have a question the tutorial doesn't answer. 
@@ -56,13 +57,13 @@ with open ('fruit-sales.pickle', 'rb') as f:
 fruit, num_sold = zip(*data)  # The * unpacks the iterable
 
 '''
-Plotting the data in a bar chart
+Plotting the data in a column chart
 
-Bar Charts (or column charts) are great for plotting categorical data.
+Column charts are great for plotting categorical data.
 '''
 
 bar_coords = range(len(fruit))  # Determines x coordinates
-plt.bar(bar_coords, num_sold)  # Plots a bar chart
+plt.bar(bar_coords, num_sold)  # Plots a column chart
 plt.xticks(bar_coords, fruit)  # Replace the xticks with the names of fruit
 
 # Chart annotations
@@ -72,7 +73,7 @@ plt.ylabel('Number of Fruit (millions)')
 plt.show()  # Shows the bar chart
 ```
 
-This results in the below column chart:
+This code results in the below column chart:
 
-
+![ColumnChart](/assets/images/Data Visualization/ColumnChart.png)
 
