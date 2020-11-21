@@ -112,3 +112,41 @@ plt.show()
 This code results in the below column chart:
 
 ![HorizontalBarChart](/assets/images/Data Visualization/HorizontalBarChart.png)
+
+## Pie Chart
+
+You can plot data into a pie bar chart using the below code snippet:
+
+```python
+import matplotlib.pyplot as plt
+import pickle
+
+
+# Load Data
+with open ('devs-outside-time.pickle', 'rb') as f:
+    data = pickle.load(f)
+    
+# Split into two lists
+time, responses = zip(*data)
+
+'''
+Plotting the data in a pie chart
+
+Pie charts are great for plotting fractional data
+'''
+# autopct='%.2f%%' means: floating point with 2 sig digits, and percent sign
+plt.pie(responses, labels=time, autopct='%.2f%%')
+
+# Forces x/y axis to have the same scale and result in a circle
+plt.axis('equal')  
+
+# Chart annotations
+plt.title('Daily Time Developers Spend Outside')
+
+plt.show()
+```
+
+This code results in the below column chart:
+
+![PieChart](/assets/images/Data Visualization/PieChart.png)
+
