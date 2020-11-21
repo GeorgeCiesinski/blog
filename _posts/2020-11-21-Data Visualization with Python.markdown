@@ -75,7 +75,7 @@ plt.show()  # Shows the bar chart
 
 This code results in the below column chart:
 
-<img src="/assets/images/Data Visualization/ColumnChart.png" alt="ColumnChart" style="zoom:50%;" />
+![ColumnChart](/assets/images/Data Visualization/ColumnChart.png)
 
 ## Horizontal Bar Chart
 
@@ -111,4 +111,4 @@ plt.show()
 
 This code results in the below column chart:
 
-<img src="/assets/images/Data Visualization/HorizontalBarChart.png" alt="HorizontalBarChart" style="zoom:50%;" />
+![HorizontalBarChart](/assets/images/Data Visualization/HorizontalBarChart.png)
