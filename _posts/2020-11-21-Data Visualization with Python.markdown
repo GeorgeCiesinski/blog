@@ -35,6 +35,10 @@ A popular application used for data analysis. It is an IPython notebook ("intera
 
 A comprehensive library for creating static, animated, and interactive visualizations in python.
 
+## seaborn
+
+A python data visualization library based on matplot lib. It provides a different API than matplotlib.
+
 ## pickle 
 
 A library that serializes and deserializes a Python object structure. Serialization, or "pickling" converts an object into a bytestream, and deserialization, or "unpickling" converts a bytestream into an object. This library is not secure and should only be used on data you trust.
@@ -362,3 +366,41 @@ plt.show()
 This code results in the below chart:
 
 ![MultiScatterPlot](/assets/images/Data Visualization/MultiScatterPlot.png)
+
+# Plotting with Seaborn
+
+As I mentioned earlier, seaborn is based on matplotlib but has a different api and different methods to plot data.
+
+## Column Chart
+
+You can plot data into a column chart using the below code snippet:
+
+```python
+import seaborn as sns
+import pickle
+
+# Load data which is stored as binary
+with open ('fruit-sales.pickle', 'rb') as f:
+    data = pickle.load(f)
+    
+# Splitting a list of tuples into two lists
+fruit, num_sold = zip(*data)  # The * unpacks the iterable
+# Convert into lists as seaborn can't read tuples for all functions
+fruit = list(fruit)
+num_sold = list(num_sold)
+
+'''
+Plotting the data in a column chart
+'''
+
+axes = sns.barplot(x=fruit, y=num_sold)
+
+# Chart annotations
+axes.set_title('Number of Fruits Sold (2017)')
+axes.set_ylabel('Number of Fruit (millions)')
+
+```
+
+This code results in the below chart:
+
+![SeabornColumnChart](/assets/images/Data Visualization/SeabornColumnChart.png)
