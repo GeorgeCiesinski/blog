@@ -246,3 +246,50 @@ plt.show()
 This code results in the below chart:
 
 ![MultiLineChart](/assets/images/Data Visualization/MultiLineChart.png)
+
+## Scatter Plot
+
+You can plot data into a scatter plot using the below code snippet:
+
+```python
+import matplotlib.pyplot as plt
+import pickle
+
+# Load data
+with open('iris.pickle', 'rb') as f:
+    iris = pickle.load(f)
+    
+'''
+iris.pickle contains a dictionary with a number of key-value pairs, including
+data, which is the array of different data types for each flower,
+feature_names which is the name of the data type. In this example we will
+only be plotting the sepal length and sepal width, which are the first two
+columns in the data table. 
+'''
+
+# Extract the first column from the data table
+sepal_length = iris['data'][:,0]  # [:,0] stands for all rows, first index
+sepal_width = iris['data'][:,1] 
+classes = iris['target']
+
+'''
+Plotting the data in a scatter plot
+
+Scatter plots are used to plot data points on a horizontal and a vertical 
+axis in the attempt to show how much one variable is affected by another.
+'''
+
+# Plots the datapoints, and colors them by class
+plt.scatter(sepal_length, sepal_width, c=classes)
+
+# Annotations
+plt.title('Sepal Length v. Sepal Width')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Sepal Width (cm')
+
+plt.show()
+```
+
+This code results in the below chart:
+
+![ScatterPlot](/assets/images/Data Visualization/ScatterPlot.png)
