@@ -73,7 +73,7 @@ plt.ylabel('Number of Fruit (millions)')
 plt.show()  # Shows the bar chart
 ```
 
-This code results in the below column chart:
+This code results in the below chart:
 
 ![ColumnChart](/assets/images/Data Visualization/ColumnChart.png)
 
@@ -109,13 +109,13 @@ plt.xlabel('Years')
 plt.show()
 ```
 
-This code results in the below column chart:
+This code results in the below chart:
 
 ![HorizontalBarChart](/assets/images/Data Visualization/HorizontalBarChart.png)
 
 ## Pie Chart
 
-You can plot data into a pie bar chart using the below code snippet:
+You can plot data into a pie chart using the below code snippet:
 
 ```python
 import matplotlib.pyplot as plt
@@ -146,7 +146,53 @@ plt.title('Daily Time Developers Spend Outside')
 plt.show()
 ```
 
-This code results in the below column chart:
+This code results in the below chart:
 
 ![PieChart](/assets/images/Data Visualization/PieChart.png)
 
+## Line Chart
+
+You can plot data into a line chart using the below code snippet:
+
+```python
+import matplotlib.pyplot as plt
+import pickle
+
+# Load Data
+with open ('prog-langs-popularity.pickle', 'rb') as f:
+    data = pickle.load(f)
+    
+'''
+Data is organized as:
+[
+ (language1, [(year1, ranking1), (year2, ranking2)...]),
+ (language2...), ...,
+]
+'''
+
+# Split into two lists
+languages, rankings = zip(*data)
+
+# Get the Java years and ranks | Split Java into two lists
+java_years, java_ranks = zip(*rankings[0])
+
+'''
+Plotting the data in a line chart
+
+Line charts are great for plotting time series data
+'''
+
+plt.plot(java_years, java_ranks)  # Use plt.plot to plot a line graph
+plt.xticks(java_years)
+
+# Annotations
+plt.title('Java Ranking')
+plt.xlabel('Year')
+plt.ylabel('Ranking')
+
+plt.show()
+```
+
+This code results in the below chart:
+
+![LineChart](/assets/images/Data Visualization/LineChart.png)
