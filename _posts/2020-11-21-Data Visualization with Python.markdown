@@ -369,7 +369,7 @@ This code results in the below chart:
 
 # Plotting with Seaborn
 
-As I mentioned earlier, seaborn is based on matplotlib but has a different api and different methods to plot data.
+As I mentioned earlier, seaborn is an alternative data visualization library based on matplotlib but has a different api and different methods to plot data.
 
 ## Column Chart
 
