@@ -41,6 +41,8 @@ A library that serializes and deserializes a Python object structure. Serializat
 
 # Plotting with matplotlib
 
+The below examples are from the Zenva tutorial I mentioned earlier. I did not include the data that was included in the tutorial as I don't have permission to publish it, but the data is stored as a bytestream and is mostly a list of tuples. I have uzed the zip function to unpack the iterables while maintaining their sequences, as this is very useful for later plotting.
+
 ## Column Chart
 
 You can plot data into a column chart using the below code snippet:
