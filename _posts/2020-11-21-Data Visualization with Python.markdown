@@ -293,3 +293,72 @@ plt.show()
 This code results in the below chart:
 
 ![ScatterPlot](/assets/images/Data Visualization/ScatterPlot.png)
+
+## Multi Scatter Plot (subplot)
+
+You can plot data into a multi scatter plot using the below code snippet:
+
+```python
+import matplotlib.pyplot as plt
+import pickle
+
+# Load data
+with open('iris.pickle', 'rb') as f:
+    iris = pickle.load(f)
+    
+'''
+iris.pickle contains a dictionary with a number of key-value pairs, including
+data, which is the array of different data types for each flower,
+feature_names which is the name of the data type. In this example we will
+only be plotting the sepal length and sepal width, which are the first two
+columns in the data table. 
+'''
+
+# Extract the first column from the data table
+sepal_length = iris['data'][:,0]  # [:,0] stands for all rows, first index
+sepal_width = iris['data'][:,1] 
+petal_length = iris['data'][:,2]
+petal_width = iris['data'][:,3]
+classes = iris['target']
+
+'''
+Plotting the data in a multi scatter plot
+
+Multi scatter plots (subplots) arrange plots into a grid fashion. These are
+good for showing multiple different relationships.
+'''
+
+# Fig is the figure containing the subplot grid
+# Axes contains the subplots that can be indexed into
+fig, axes = plt.subplots(2, 2)  # Creates a 2x2 grid of plots (column, row)
+fig.suptitle('Iris Dataset')  # figure title
+
+# Populate subplots
+# Sepal length vs sepal width
+axes[0,0].scatter(sepal_length, sepal_width, c=classes)  # Top left
+axes[0,0].set_xlabel('Sepal Length (cm)')
+axes[0,0].set_ylabel('Sepal Width (cm)')
+axes[0,0].title.set_text('Sepal length vs sepal width')
+# Petal length vs petal width
+axes[0,1].scatter(petal_length, petal_width, c=classes)  # Top Right
+axes[0,1].set_xlabel('Petal Length (cm)')
+axes[0,1].set_ylabel('Petal Width (cm)')
+axes[0,1].title.set_text('Petal length vs petal width')
+# Petal length vs petal width
+axes[1,0].scatter(sepal_length, petal_length, c=classes)  # Bottom Left
+axes[1,0].set_xlabel('Sepal Length (cm)')
+axes[1,0].set_ylabel('Petal Length (cm)')
+axes[1,0].title.set_text('Petal length vs petal width')
+# Sepal width vs petal width
+axes[1,1].scatter(sepal_width, petal_width, c=classes)  # Bottom Right
+axes[1,1].set_xlabel('Sepal Width (cm)')
+axes[1,1].set_ylabel('Petal Width (cm)')
+axes[1,1].title.set_text('Sepal width vs petal width')
+
+fig.tight_layout()  # Optimizes layout so xlabels can be seen
+plt.show()
+```
+
+This code results in the below chart:
+
+![MultiScatterPlot](/assets/images/Data Visualization/MultiScatterPlot.png)
