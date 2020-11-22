@@ -196,3 +196,51 @@ plt.show()
 This code results in the below chart:
 
 ![LineChart](/assets/images/Data Visualization/LineChart.png)
+
+## Multi-line Chart
+
+You can plot data into a multi-line chart using the below code snippet:
+
+```python
+import matplotlib.pyplot as plt
+import pickle
+
+# Load Data
+with open ('prog-langs-popularity.pickle', 'rb') as f:
+    data = pickle.load(f)
+    
+'''
+Data is organized as:
+[
+ (language1, [(year1, ranking1), (year2, ranking2)...]),
+ (language2...), ...,
+]
+'''
+
+# Split into two lists
+languages, rankings = zip(*data)
+
+'''
+Plotting the data in a multi-line chart
+
+Multi-line charts allow multiple items to be plotted
+'''
+
+# Iterate through the languages and "plot" them
+for i in range(len(languages)):
+    # For each language, split the data into years and rankings lists
+    years, ranks = zip(*rankings[i])
+    plt.plot(years, ranks)
+    
+# Annotations
+plt.title('Programming Language Rankings')
+plt.xlabel('Year')
+plt.ylabel('Ranking')
+plt.legend(languages)
+    
+plt.show()
+```
+
+This code results in the below chart:
+
+![MultiLineChart](/assets/images/Data Visualization/MultiLineChart.png)
