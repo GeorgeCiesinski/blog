@@ -404,3 +404,37 @@ axes.set_ylabel('Number of Fruit (millions)')
 This code results in the below chart:
 
 ![SeabornColumnChart](/assets/images/Data Visualization/SeabornColumnChart.png)
+
+## Bar Chart
+
+You can plot data into a Bar chart using the below code snippet:
+
+```python
+import seaborn as sns
+import pickle
+
+# Load Data
+with open('coding-exp-by-dev-type.pickle', 'rb') as f:
+    data = pickle.load(f)
+    
+# Split into two lists
+dev_types, years_exp = zip(*data)
+dev_types = list(dev_types)
+years_exp = list(years_exp)
+
+'''
+Plotting the data in a bar chart
+'''
+
+# Switching the x/y order to y/x makes the bar chart horizontal
+axes = sns.barplot(y=dev_types, x=years_exp)
+
+# Chart Annotations
+axes.set_title('Years of Coding Experience by Developer Type')
+axes.set_xlabel('Years')
+
+```
+
+This code results in the below chart:
+
+![SeabornBarChart](/assets/images/Data Visualization/SeabornBarChart.png)
