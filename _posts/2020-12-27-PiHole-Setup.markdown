@@ -1,11 +1,15 @@
 layout: single
-title:  "PiHole Setup"
+title:  "Pi-Hole Setup"
 date:   2020-12-27 23:00:00 -0500
 categories: DIY Network
 comments: true
 typora-root-url: ..
 
-I have been trying to find a use for my Raspberry Pi 3 for years. As a tech enthusiast, I have tons of spare phones, old computers, boxes of computer parts, and even an unused Raspberry Pi 3 lying around. In the past, I have tried to set up the Pi as a Plex Media Server, but the Pi 3 turned out to be very bad at encoding, resulting in choppy and laggy playback. I tried using it as a Retro Pie, but with Nes and Snes emulation now available on console, and plenty of options available for gaming, I found that I did not use it a lot. Then I came across the [Pi-hole](https://pi-hole.net). 
+I have been trying to find a use for my Raspberry Pi 3 for years. As a tech enthusiast, I have tons of spare phones, old computers, boxes of computer parts, and even an unused Raspberry Pi 3 lying around. 
+
+![PiTop](/assets/images/PiHole/PiTop)
+
+In the past, I have tried to set up the Pi as a Plex Media Server, but the Pi 3 turned out to be very bad at encoding, resulting in choppy and laggy playback. I tried using it as a Retro Pie, but with Nes and Snes emulation now available on console, and plenty of options available for gaming, I found that I did not use it a lot. Then I came across the [Pi-hole](https://pi-hole.net). 
 
 # What is Pi-hole
 
