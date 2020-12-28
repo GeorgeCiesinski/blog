@@ -51,3 +51,12 @@ Once all of this is done, you are set! Your private key and public key will ensu
 
 Thanks for reading my post! I hope that this was helpful, and that you are looking forward to future posts about **git** in the future.
 
+# Optional: Save passphrase to Keychain
+
+On Mac, we have a built in password manager known as keychain. It is possible to save the passphrase so you no longer need to enter it when using git:
+
+```
+ssh-add -K ~/.ssh/id_rsa
+```
+
+If you prefer having to enter the passphrase every time for security reasons, you can skip this step.
