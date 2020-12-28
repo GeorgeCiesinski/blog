@@ -1,13 +1,19 @@
+---
 layout: single
-title:  "Pi-Hole Setup"
-date:   2020-12-27 23:00:00 -0500
-categories: DIY Network
+title:  "Setting up Pi-Hole on Raspberry Pi 3"
+date:   2020-11-27 23:00:00 -0500
+categories: Programming Python Data
 comments: true
 typora-root-url: ..
+---
 
 I have been trying to find a use for my Raspberry Pi 3 for years. As a tech enthusiast, I have tons of spare phones, old computers, boxes of computer parts, and even an unused Raspberry Pi 3 lying around. 
 
-![PiTop](/assets/images/PiHole/PiTop)
+![PiTop](/assets/images/PiHole/PiTop.jpeg)
+
+I really like the case I got for this Pi as well, as it looks pretty sweet from the profile: 
+
+![PiSide](/assets/images/PiHole/PiSide.jpeg)
 
 In the past, I have tried to set up the Pi as a Plex Media Server, but the Pi 3 turned out to be very bad at encoding, resulting in choppy and laggy playback. I tried using it as a Retro Pie, but with Nes and Snes emulation now available on console, and plenty of options available for gaming, I found that I did not use it a lot. Then I came across the [Pi-hole](https://pi-hole.net). 
 
@@ -33,9 +39,19 @@ Setting up Pi-hole was made very easy thanks to a [video](https://www.youtube.co
 
 ## Installing OS on Raspberry Pi
 
-First, I downloaded [Diet Pi](https://dietpi.com), which is a lightweight debian OS. As we will be primarily accessing the Pi using command line over SSH, it is not necessary to have any heavier OS with a GUI. Once this was downloaded, I unzipped the folder. 
+First, I downloaded [Diet Pi](https://dietpi.com), which is a lightweight debian OS. As we will be primarily accessing the Pi using command line over SSH, it is not necessary to have any heavier OS with a GUI. 
 
-Next, I downloaded [Balena Etcher](https://www.balena.io/etcher/), which is a simple to use flash utility which lets you flash an image onto a disk. Once I installed Etcher on my Mac, I simply flashed the Micro SD card with the Diet Pi image, and the first step was complete. Following installation, I plugged the Raspberry Pi 3 into power, and connected it to one of my routers with an ethernet cord. My Deco app notified me that DietPi has joined the network within minutes. 
+![DietPi](/assets/images/PiHole/1-DietPi.png)
+
+Once this was downloaded, I unzipped the folder. 
+
+Next, I downloaded [Balena Etcher](https://www.balena.io/etcher/), which is a simple to use flash utility which lets you flash an image onto a disk. 
+
+![Etcher](/assets/images/PiHole/2-BalenaEtcher.png)Once I installed Etcher on my Mac, I simply flashed the Micro SD card with the Diet Pi image, and the first step was complete. 
+
+![FlashComplete](/assets/images/PiHole/3-FlashComplete.png)
+
+Following installation, I plugged the Raspberry Pi 3 into power, and connected it to one of my routers with an ethernet cord. My Deco app notified me that DietPi has joined the network within minutes. 
 
 ## Connecting to DietPi via SSH for the first time
 
@@ -49,13 +65,21 @@ ssh root@ip
 
 The terminal will then prompt you to enter the password. The default pass for the DietPi is `dietpi`. Upon entering the correct password, you are greeted by a license you have to agree to in order to use the DietPi. 
 
-After agreeing to the license terms, DietPi goes through an initial setup process including checking for and installing updates. This process takes a few minutes, but eventually shows you a page asking if you would like to opt in for a survey. I skipped this in order to save time. 
+After agreeing to the license terms, DietPi goes through an initial setup process including checking for and installing updates. This process takes a few minutes, but eventually shows you a page asking if you would like to opt in for a survey. 
+
+![DietPiSurvey](/assets/images/PiHole/4-DietPiSurvey.png)
+
+I skipped this in order to save time. 
 
 This took me to yet another page asking if I would like to change the `default global software password` for dietpi. It was not recommended to be left as `dietpi` so I went ahead and updated it to something more secure. The next screen asked me if I want to change the existing unix user passwords. This was especially confusing to me as I do not know what is the difference between the global software password and the unix password. Nevertheless, I made both of these secure and moved on to the next step.
 
 The next page asked if I want to disable Serial console as it is currently enabled. I followed the advice in the youtube tutorial linked earlier and left it as is. 
 
-After I exited the last prompt, DietPi presented me with a menu with a number of different options. I selected Install, which presented a message advising that no software has been found for installation and if we want to proceed with installing a pure DietPi image. Again, I opted to follow the advice of the tutorial and pressed ok. This went through another set of installs and updates which took around another minute, but finally resulted in a console screen with information, and some beautiful ascii art. 
+After I exited the last prompt, DietPi presented me with a menu with a number of different options. 
+
+![DietPiMenu](/assets/images/PiHole/5-DietPiMenu.png)
+
+I selected Install, which presented a message advising that no software has been found for installation and if we want to proceed with installing a pure DietPi image. Again, I opted to follow the advice of the tutorial and pressed ok. This went through another set of installs and updates which took around another minute, but finally resulted in a console screen with information, and some beautiful ascii art. 
 
 ## Installing PiHole
 
@@ -67,9 +91,25 @@ I went to the [PiHole Github Page](https://github.com/pi-hole/pi-hole), which in
 curl -sSL https://install.pi-hole.net | bash
 ```
 
-I entered this into the DietPi console, and entered the above command. The automated install showed a visual check list which was automatically checked off, and eventually started spitting out logs into the console. Finally, it presented me with the message "This installer will transform your device into a network-wide ad blocker!" I clicked ok, and ok again on the next page requesting donations.
+I entered this into the DietPi console, and entered the above command. 
 
- The next page informed me that Pi-Hole is a server so it needs a static IP address. We will be setting this later. Pi-Hole asked me to select an upstream DNS provider. I selected Cloudflare for this step. Next, Pi-Hole informed me that Pi-Hole uses third party lists to block adds and suggested a few to start. I clicked Ok. The next page asked me to select which protocols to use for the pihole. After looking into this, I selected IPV4 and IPV6 because both protocols are used to provide ads. 
+![PiHole](/assets/images/PiHole/7-PiHoleSetupScreen.png)
+
+The automated install showed a visual check list which was automatically checked off, and eventually started spitting out logs into the console. 
+
+![PiHoleChecklist](/assets/images/PiHole/8-PiHoleChecklist.png)
+
+Finally, it presented me with the below message: 
+
+![Transform](/assets/images/PiHole/9-NetworkWideAdblocker.png)
+
+I clicked ok, and ok again on the next page requesting donations.
+
+ The next page informed me that Pi-Hole is a server so it needs a static IP address. 
+
+![StaticIP](/assets/images/PiHole/10-StaticIP.png)
+
+We will be setting this later. Pi-Hole asked me to select an upstream DNS provider. I selected Cloudflare for this step. Next, Pi-Hole informed me that Pi-Hole uses third party lists to block adds and suggested a few to start. I clicked Ok. The next page asked me to select which protocols to use for the pihole. After looking into this, I selected IPV4 and IPV6 because both protocols are used to provide ads. 
 
 The next page asked me to configure static IP. At this stage, it was necessary to go into my router settings and set a DHCP range which was outside the range of whatever I use as my static IP. This was pretty straight forward, and the exact method differs depending on which router you are using. I then went back to the Pi-Hole and set a custom IP of my choosing. I also made sure that the gateway it is using is correct.
 
