@@ -8,6 +8,8 @@ typora-root-url: ..
 
 ---
 
+# Python *args and *kwargs
+
 Yesterday I was tasked with taking a class method my colleague created, and creating a universal method that all classes can access. This way, instead of being repeated dozens of times across many different modules, it can be written once in a single place, and can be modified easier in the future. This task would have been quite easy under normal circumstances, but this class method made use of **\**kwargs**, while the modules that called this class method relied on ***args**. My colleague tried to explain the concept of ***args** and **\**kwargs** to me, but my brain was refusing to cooperate and I understood none of it. I decided to make this a topic of today's blog as I figure it out.
 
 # What are *args and **kwargs
