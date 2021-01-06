@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Python Args and Kwargs"
 date:   2020-12-31 23:00:00 -0500
 categories: Programming Python
