@@ -2,14 +2,14 @@
 layout: single
 title:  "Setting up Plex and SabNZBD on Raspberry Pi 4"
 date:   2021-01-24 23:00:00 -0500
-categories: DIY Raspberry-pi
+categories: DIY Raspberry-pi Network
 comments: true
 typora-root-url: ..
 ---
 
 Hello everyone! I am very excited for today's project. Today, I will be setting up Plex and SABNZBD on a brand new Canakit Raspberry Pi 4 (4GB). 
 
-This is a project I have wanted to do for a long time. The idea for this project stemmed from my regular media centre, aka my gaming pc. This power hungry beast needs to be left on whenever I want to access my Plex library or download new content using SABNZBD. The obvious problems here are with power draw, reducing the lifespan of my gaming PC, and using up my computer resources if someone wants to stream my library while I am gaming. Frankly, it isn't that huge of a deal, but I yearned for a better way to host my library. 
+This is a project I have wanted to do for a long time. The idea for this project stemmed from my regular media centre, aka my gaming pc, and my [previous blog](https://georgeciesinski.github.io/raspberry-pi/diy/network/PiHole-Setup/) about setting up Pi-Hole on a Raspberry Pi 3. This power hungry beast needs to be left on whenever I want to access my Plex library or download new content using SABNZBD. The obvious problems here are with power draw, reducing the lifespan of my gaming PC, and using up my computer resources if someone wants to stream my library while I am gaming. Frankly, it isn't that huge of a deal, but I yearned for a better way to host my library. 
 
 # Raspberry Pi 4
 
