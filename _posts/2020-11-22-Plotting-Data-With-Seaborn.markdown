@@ -80,3 +80,11 @@ axes.set_xlabel('Years')
 This code results in the below chart:
 
 ![SeabornBarChart](/assets/images/Data Visualization/SeabornBarChart.png)
+
+# Update
+
+## January 24, 2021
+
+I wanted to post an update on this post as it has been a while since I started it, and I never finished the different kind of plots you can do in Seaborn. At this time, I will not be updating this post any further as I do not know if I will be using Seaborn to plot in the future. There are so many different tools, some that I am more eager to use than Seaborn. I also have a project coming up were I will be scraping, analyzing, and plotting data, so look out for that one if you are interested in this kind of stuff. 
+
+Thanks for reading!
