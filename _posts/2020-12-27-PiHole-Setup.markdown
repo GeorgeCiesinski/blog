@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Setting up Pi-Hole on Raspberry Pi 3"
-date:   2020-11-27 23:00:00 -0500
+date:   2020-12-27 23:00:00 -0500
 categories: Programming Python Data
 comments: true
 typora-root-url: ..
