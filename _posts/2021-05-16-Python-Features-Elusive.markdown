@@ -13,7 +13,26 @@ As usual, it has been a while since my last post. I have been devoting all of my
 
 The first thing that absolutely blew my mind is known as **sets**. This one shooketh me. I don't know how, but I completely overlooked sets when I was learning Python. Before I get to sets, they are a way to store multiple values in a single variable, similar to lists, tuples, and dicts. I will cover those briefly below, then talk about sets.
 
-As you might know, you can make a list with square brackets: `list = ['this', 'is', 'a', 'list']`. You can make tuples similarly but with regular brackets: `tuple = (1, 2, 3)`. Lists and tuples are similar. Both can be iterated, and the individual elements inside are ordered, so they can be accessed with an index: `item = list[0]` and `item = tuple[0]`. The main difference is that a list is mutable where the values can be changed, while a tuple is immutable. I wont dive too deep into these. 
+As you might know, you can make a list with square brackets:
+
+```
+`list = ['this', 'is', 'a', 'list']
+```
+
+You can make tuples similarly but with regular brackets:
+
+```
+tuple = (1, 2, 3)
+```
+
+ Lists and tuples are similar. Both can be iterated, and the individual elements inside are ordered, so they can be accessed with an index: 
+
+```
+item = list[0]
+item = tuple[0]
+```
+
+The main difference is that a list is mutable where the values can be changed, while a tuple is immutable. I wont dive too deep into these. 
 
 Dictionaries or 'dicts' are another way of storing multiple pieces of data in a variable. They can be created with curly brackets: 
 
@@ -29,7 +48,11 @@ Dicts are "key-value pairs" which means they contain a key, and a value, for eac
 
 ## What is a set?
 
-So far, all of this should ring a bell, if you have learned Python. What I didn't know is that there is another way to store multiple values known as a **set**. A set also uses curly brackets, but stores single values like a list or tuple, instead of key-value pairs like a dict: `set = {'this', 'is', 'a', 'set'}`
+So far, all of this should ring a bell if you have learned Python. What I didn't know is that there is another way to store multiple values known as a **set**. A set also uses curly brackets, but stores single values like a list or tuple, instead of key-value pairs like a dict: 
+
+```
+set = {'this', 'is', 'a', 'set'}
+```
 
 Sets are mutable, so they can be changed, but they are unordered, so they cannot be accessed with an index. Instead, you need to use methods such as `.add()` or `.remove()` to add or remove individual values. Additionally, they cannot contain duplicates. If you try to do:
 
