@@ -16,7 +16,7 @@ The first thing that absolutely blew my mind is known as **sets**. This one shoo
 As you might know, you can make a list with square brackets:
 
 ```
-`list = ['this', 'is', 'a', 'list']
+list = ['this', 'is', 'a', 'list']
 ```
 
 You can make tuples similarly but with regular brackets:
