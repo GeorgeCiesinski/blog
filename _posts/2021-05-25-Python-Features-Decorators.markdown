@@ -7,7 +7,7 @@ comments: true
 typora-root-url: ..
 ---
 
-This is the third part of my 3 part series about Python Features I didn't know about. The first part can be found [here](https://georgeciesinski.github.io/programming/Python-Features-Elusive/) and the second part here. This blog covers some basics about decorators. 
+This is the third part of my 3 part series about Python Features I didn't know about. The first part can be found [here](https://georgeciesinski.github.io/programming/Python-Features-Elusive/) and the second part [here](https://georgeciesinski.github.io/programming/More-Python-Features-Elusive/). This blog covers some basics about decorators. 
 
 Decorators let you add new functionality to an existing function without modifying its structure. 
 
@@ -44,19 +44,19 @@ new_instance = ClassName()
 # Invoking the instance_method from the new instance
 new_instance.instance_method()
 
-This is the instance method of <__main__.ClassName object at 0x7fb460780790>
+>> This is the instance method of <__main__.ClassName object at 0x7fb460780790>
 
 # Invoking the instance_method from the class and passing the new instance
 ClassName.instance_method(new_instance)
 
-This is the instance method of <__main__.ClassName object at 0x7fb460780790>
+>> This is the instance method of <__main__.ClassName object at 0x7fb460780790>
 ```
 
 ```python
 # 2. Calling the class instance does not require an instance to be created first
 new_class.class_method()
 
-This is the class method of {cls}
+>> This is the class method of {cls}
 ```
 
 Class methods are used like factories, which I will explain later in this section. 
@@ -74,7 +74,7 @@ ClassName:
 		
 ClassName.static_method()
 
-This is a static method.
+>> This is a static method.
 ```
 
 If you have a method that feels like it belongs in a certain class, even if it doesn't use the instance or class data, then that is when you would use a static method.
@@ -109,21 +109,23 @@ new_steam_train = Train.steam_train("Line 17", 70)
 new_maglev = Train.maglev("Line 501", 500)
 
 print(new_steam_train)
-<Train Line 17, Steam Train, 70kph>
+
+>> <Train Line 17, Steam Train, 70kph>
 
 print(new_maglev)
-<Train Line 501, Maglev, 500kph>
+
+>> <Train Line 501, Maglev, 500kph>
 ```
 
 Of course, you can also use an `if statement` to make sure it is an allowed type, but you can also use a class method to call the class itself and to pass an accepted type in right away. 
 
 # Building your own Decorators
 
-Now that you are familiar with the built-in decorators, you can learn how to make your own.
+Now that you are familiar with the built-in decorators, here's how to make your own.
 
 ## Simple Decorators
 
-The below example shows how you can add some security functionality to an existing function: 
+To make our decorator, we will be defining a function inside a function. The outer function acts as the decorator, the inner function is the function replacing whatever function is passed into the decorator. The below example shows how you can add some security functionality to an existing function: 
 
 ```python
 # make_secure() is the decorator, while secure_function() is what is replacing func. 
@@ -153,7 +155,8 @@ user = {
 
 # Login fails
 root_login()
-Billy does not have admin rights.
+
+>> Billy does not have admin rights.
 
 # Attempt to call function with an admin role
 user = {
@@ -163,7 +166,8 @@ user = {
 
 # Login successful
 root_login()
-Billy has logged in successfully.
+
+>> Billy has logged in successfully.
 ```
 
 ## Using @ syntax for decorators
@@ -195,7 +199,8 @@ user = {
 
 # Login fails
 root_login()
-Billy does not have admin rights.
+
+>> Billy does not have admin rights.
 
 # Attempt to call function with an admin role
 user = {
@@ -205,7 +210,8 @@ user = {
 
 # Login successful
 root_login()
-Billy has logged in successfully.
+
+>> Billy has logged in successfully.
 ```
 
 ## Decorators and function names
@@ -215,7 +221,7 @@ Decorators rewrite the function's name within Python when they replace the origi
 ```python
 print(root_login.__name__)
 
-secure_function
+>> secure_function
 ```
 
 It has been renamed within the decorator to `secure_function` instead. This also affects any documentation that might exist for the original function, as it is now replaced with secure_function.
@@ -242,7 +248,7 @@ Now if we check the name of the function again, we get:
 ```python
 print(root_login.__name__)
 
-root_login
+>> root_login
 ```
 
 You will need to use this on every decorator that you write.
@@ -293,11 +299,11 @@ Doing this yields the expected result:
 ```python
 root_login('finance')
 
-Billy has logged into finance system successfully.
+>> Billy has logged into finance system successfully.
 
 root_login('development')
 
-Billy has logged into development console successfully.
+>> Billy has logged into development console successfully.
 ```
 
 ## How to make decorators with parameters
@@ -351,11 +357,11 @@ user = {
 
 root_login()
 
-Billy is unable to login.
+>> Billy is unable to login.
 
 regular_login()
 
-Billy is unable to login.
+>> Billy is unable to login.
 
 # Attempt to login as regular_user (root_login fails, regular_login works)
 user = {
@@ -365,11 +371,11 @@ user = {
 
 root_login()
 
-Nancy is unable to login.
+>> Nancy is unable to login.
 
 regular_login()
 
-User Nancy has logged in successfully.
+>> User Nancy has logged in successfully.
 
 # Attempt to login as an admin (root_login works, regular_login fails)
 user = {
@@ -379,11 +385,11 @@ user = {
 
 root_login()
 
-Admin Agent Smith has logged into root successfully.
+>> Admin Agent Smith has logged into root successfully.
 
 regular_login()
 
-Agent Smith is unable to login.
+>> Agent Smith is unable to login.
 ```
 
 # Conclusion

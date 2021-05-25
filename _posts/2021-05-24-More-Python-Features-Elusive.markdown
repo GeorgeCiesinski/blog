@@ -7,7 +7,7 @@ comments: true
 typora-root-url: ..
 ---
 
-A few days ago I made a blog [post](https://georgeciesinski.github.io/programming/Python-Features-Elusive/) about Python seatures I didn't know about. The post was getting quite long, so this is a continuation of the previous post. Some of these things I know, but want to get a better understanding of. Others, I may have never seen before.
+A few days ago I made part 1 of this series [here](https://georgeciesinski.github.io/programming/Python-Features-Elusive/) about Python features I didn't know about. The post was getting quite long, so this is a continuation of the previous post. Some of these things I know, but want to get a better understanding of. Others, I may have never seen before. You can also find part 3 [here](https://georgeciesinski.github.io/programming/Python-Features-Decorators/). 
 
 # Class Inheritance
 
@@ -86,7 +86,7 @@ garage = Garage(car_1, car_2)
 
 print(garage)
 
-The garage has 2 cars.
+>> The garage has 2 cars.
 ```
 
 # Custom Error Classes
@@ -126,7 +126,8 @@ result = calculate(1, 2, 3, operator=add)
 
 # The function is called and the variables are passed in to get an expected result
 print(result)
-6
+
+>> 6
 ```
 
 # Mutable Parameters & Optional Parameters

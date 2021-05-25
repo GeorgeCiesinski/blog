@@ -7,7 +7,11 @@ comments: true
 typora-root-url: ..
 ---
 
-As usual, it has been a while since my last post. I have been devoting all of my free time to programming instead of blogging! Today, I finally found a good reason to write a new blog. I recently picked up my first few Udemy courses, including [REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/) by [Jose Salvatierra](https://www.udemy.com/course/rest-api-flask-and-python/#instructor-1). The first section of this tutorial is "A full Python refresher" and covers what I thought were Python basics. I was going to skip this tutorial, but one of the first few videos in the tutorial said to click through the videos even if you think you know the stuff. Well, Jose was right. I was very surprised by the Python basics I thought I knew but somehow completely missed. This blog is about those things. It is mostly random Python features, and isn't centered around any single topic. Without wasting time, I will get started!
+As usual, it has been a while since my last post. I have been devoting all of my free time to programming instead of blogging! Today, I finally found a good reason to write a new blog. I recently picked up my first few Udemy courses, including [REST APIs with Flask and Python](https://www.udemy.com/course/rest-api-flask-and-python/) by [Jose Salvatierra](https://www.udemy.com/course/rest-api-flask-and-python/#instructor-1). The first section of this tutorial is "A full Python refresher" and covers what I thought were Python basics. I was going to skip this tutorial, but one of the first few videos in the tutorial said to click through the videos even if you think you know the stuff. Well, Jose was right. I was very surprised by the Python basics I thought I knew but somehow completely missed. This blog is about those things. It is mostly random Python features, and isn't centered around any single topic. 
+
+You can also find part 2 of this series [here](https://georgeciesinski.github.io/programming/More-Python-Features-Elusive/), and part 3 [here](https://georgeciesinski.github.io/programming/Python-Features-Decorators/). 
+
+Without wasting time, I will get started!
 
 # Lists, Tuples, Dicts...... and Sets? 
 
@@ -82,7 +86,7 @@ You can combine them into a new set called `friends` with the `union` function:
 friends = men.union(women)
 print(friends)
 
-{'bob', 'john', 'jerry', 'mary', 'stacy', 'tara'}
+>> {'bob', 'john', 'jerry', 'mary', 'stacy', 'tara'}
 ```
 
 ### Difference
@@ -100,7 +104,7 @@ We can perform `difference` to find out who isn't a gamer:
 non_gamers = friends.difference(gamers)
 print(non_gamers)
 
-{'john', 'jerry', 'mary', 'tara'}
+>> {'john', 'jerry', 'mary', 'tara'}
 ```
 
 ### Intersection
@@ -118,7 +122,7 @@ We could extrapolate who can drive using both using `intersection`
 drive_both = drive_stick.intersection(drive_automatic)
 print(drive_both)
 
-{'bob', 'stacy'}
+>> {'bob', 'stacy'}
 ```
 
 # Lambda Functions
@@ -139,7 +143,7 @@ One way is to use it by naming it. You can then call it like a regular function:
 add_nums = lambda x, y: x + y
 add_nums(1, 2)
 
-3
+>> 3
 ```
 
 ## In line lambda function
@@ -149,7 +153,7 @@ Another way to do this is to use it in line. To do this, you must wrap the lambd
 ```python
 (lambda x, y: x + y)(1, 2)
 
-3
+>> 3
 ```
 
 ## Utility of lambda functions
@@ -163,7 +167,7 @@ One way is it can shorten code. For example:
 even_nums = list(filter(lambda x: x%2 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 print(even_nums)
 
-[2, 4, 6, 8, 10]
+>> [2, 4, 6, 8, 10]
 
 # The regular way is longer
 def filter_even_nums(x):
@@ -172,7 +176,7 @@ def filter_even_nums(x):
 even_nums = list(filter(filter_even_nums, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 print(even_nums)
 
-[2, 4, 6, 8, 10]
+>> [2, 4, 6, 8, 10]
 
 ```
 
@@ -188,13 +192,13 @@ double_func = dynamic_multiply(2)
 # Doubles 10
 double_func(10)
 
-20
+>> 20
 
 # Create a tripling function by passing 3 to dynamic_multiply
 triple_func = dynamic_multiply(3)
 triple_func(10)
 
-30
+>> 30
 ```
 
 There are many other utilities, but these are the ones I found most useful and most interesting. 
@@ -213,12 +217,12 @@ nums = [1, 2, 3, 4, 5]
 # Prints out the nums list
 print(nums)
 
-[1, 2, 3, 4, 5]
+>> [1, 2, 3, 4, 5]
 
 # Unpacks the list into individual ints and prints those out
 print(*nums)
 
-1 2 3 4 5
+>> 1 2 3 4 5
 ```
 
 This can be used to pass values to functions as well: 
@@ -232,7 +236,7 @@ nums = [5, 7]
 # Unpacks nums into two variables and calls add_nums
 print(add_nums(*nums))
 
-12
+>> 12
 
 ```
 
@@ -251,12 +255,12 @@ def add_nums(*args):
 # Call add_nums and pass 3 variables
 print(add_nums(1, 2, 3))
 
-6
+>> 6
 
 # Call add_nums and pass 4 variables
 print(add_nums(1, 2, 3, 4))
 
-10
+>> 10
 
 ```
 
@@ -273,7 +277,7 @@ def print_kwargs(**kwargs):
   
 print_kwargs(name='bob', surname='bobington', age=29)
 
-{'name': 'bob', 'surname': 'bobington', 'age': 29}
+>> {'name': 'bob', 'surname': 'bobington', 'age': 29}
 ```
 
 When used while calling a function, it unpacks the dict into variables:
@@ -291,7 +295,8 @@ details = {
 
 # Unpacks dict into keyword arguments
 print_details(**details)
-bob bobington 29
+
+>> bob bobington 29
 ```
 
 # Magic or Dunder Methods (Object-oriented Programming)
@@ -312,7 +317,7 @@ class Friend:
 new_friend = Friend('Bob', 25)
 print(new_friend.name, new_friend.age)
 
-Bob 25
+>> Bob 25
 ```
 
 ## `__str__()`
@@ -329,7 +334,7 @@ new_friend = Friend()
 print(new_friend)
 
 # Output is a string representation of the object
-<__main__.Friend object at 0x7fa2b8780220>
+>> <__main__.Friend object at 0x7fa2b8780220>
 ```
 
 ```python
@@ -347,7 +352,7 @@ new_friend = Friend()
 print(new_friend)
 
 # Output is the defined output in the __str__() method
-Friend Object
+>> Friend Object
 ```
 
 ## `__repr__()` 
@@ -369,7 +374,7 @@ class Friend:
 new_friend = Friend('Nick', 20)
 print(new_friend)
 
-<Person('Nick', 20)>
+>> <Person('Nick', 20)>
 ```
 
 It is important to note that if there is an `__str__()` method, then this will override the print output, so to test it, you should comment out the `__str__()` method temporarily. This is frequently used in debugger output.
