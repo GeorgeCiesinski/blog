@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Text-Script and Plans for the Future"
-date:   2021-01-06 23:00:00 -0500
+date:   2022-01-06 23:00:00 -0500
 categories: Bootstrap, Flask, Front-end, Programming, Text-Script
 comments: true
 typora-root-url: ..
