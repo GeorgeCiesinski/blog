@@ -7,7 +7,7 @@ comments: true
 typora-root-url: ..
 ---
 
-Woah, I'm on a real roll! This marks the third day in a row I am blogging. Truth be told, I had a busy day and my brain feels like tenderized meat. Today, I worked on the CaterClock project I mentioned in a previous blog and was able to utilize Flask and Jinja to build a method called `show_cart()`. This method makes an API call to our API, gets the user object, extracts the orders, and populates the cart using Jinja.
+Woah, I'm on a real roll! This marks the third day in a row I am blogging. Truth be told, I had a busy day and my brain feels like tenderized meat. Today, I worked on the CaterClock project I mentioned in a previous blog and was able to utilize Flask and Jinja to build a method called `show_cart()`. This method makes an API call to our API, gets the user object, extracts the orders, and populates the cart using Jinja. 
 
 # What is Jinja
 
