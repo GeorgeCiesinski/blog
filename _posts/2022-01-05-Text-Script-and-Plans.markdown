@@ -2,7 +2,7 @@
 layout: single
 title:  "Text-Script and Plans for the Future"
 date:   2022-01-05 23:00:00 -0500
-categories: Bootstrap, Programming, Python, Text-Script
+categories: Bootstrap Programming Python Text-Script
 comments: true
 typora-root-url: ..
 ---
