@@ -51,7 +51,7 @@ Note: I have included a space between the brackets and the following characters 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include 'head.html' %}
+  { % include 'head.html' % }
 </head>
 ```
 
@@ -69,18 +69,18 @@ This allows you to modify a parent template using content from a child template:
     <title>Website Title</title>
   </head>
   <body>
-    {% block body %}
-    {% end block %}
+    { % block body % }
+    { % end block % }
   </body>
 </html>
 ```
 
 ```html
 <!-- Child Template -->
-{% extends 'parent_template.html' %}
-{% block body %}
+{ % extends 'parent_template.html' % }
+{ % block body % }
   <div class="container">Lorem ipsum. </div>
-{% end block %}
+{ % end block % }
 ```
 
 `{ % for item in items % }` - Creates a for loop and executes the following code. Requires `{ % endfor % }`:
