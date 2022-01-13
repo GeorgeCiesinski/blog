@@ -1,23 +1,23 @@
 ---
 layout: single
-title:  "Python Decorators"
-date:   2021-05-25 23:00:00 -0500
+title: "Python Decorators"
+date: 2021-05-25 23:00:00 -0500
 categories: Programming
 comments: true
 typora-root-url: ..
 ---
 
-This is the third part of my 3 part series about Python Features I didn't know about. The first part can be found [here](https://georgeciesinski.github.io/programming/Python-Features-Elusive/) and the second part [here](https://georgeciesinski.github.io/programming/More-Python-Features-Elusive/). This blog covers some basics about decorators. 
+This is the third part of my 3 part series about Python Features I didn't know about. The first part can be found [here](https://georgeciesinski.github.io/programming/Python-Features-Elusive/) and the second part [here](https://georgeciesinski.github.io/programming/More-Python-Features-Elusive/). This blog covers some basics about decorators.
 
-Decorators let you add new functionality to an existing function without modifying its structure. 
+Decorators let you add new functionality to an existing function without modifying its structure.
 
 # Built-in Method Decorators
 
-Before we learn how to make our own decorators, there are a few built-in ones we can look at. You can use these decorators on your methods to change the way Python lets you use them. 
+Before we learn how to make our own decorators, there are a few built-in ones we can look at. You can use these decorators on your methods to change the way Python lets you use them.
 
 ## Three types of methods
 
-There are three types of methods. An **instance method** has no decorators, and it is the method you usually use in object-oriented programming. This requires an instance to be created to be used, and has information about the instance. Next is a **class method**. This is a method with the @classmethod decorator, and has information about the class. Finally, there is the **static method**, which has the @staticmethod decorator. This one has neither the information about the instance or the class. 
+There are three types of methods. An **instance method** has no decorators, and it is the method you usually use in object-oriented programming. This requires an instance to be created to be used, and has information about the instance. Next is a **class method**. This is a method with the @classmethod decorator, and has information about the class. Finally, there is the **static method**, which has the @staticmethod decorator. This one has neither the information about the instance or the class.
 
 Instance methods are used for most things. They often use date that is in the object, and use `self` frequently to access this data.
 
@@ -30,7 +30,7 @@ class ClassName:
 
 	def instance_method(self):
 		print(f"This is the instance method of {self}")
-		
+
 	# Use @classmethod decorator and use the argument cls instead of self
 	@classmethod
 	def class_method(cls):
@@ -59,11 +59,11 @@ new_class.class_method()
 >> This is the class method of {cls}
 ```
 
-Class methods are used like factories, which I will explain later in this section. 
+Class methods are used like factories, which I will explain later in this section.
 
 ## @staticmethod
 
-A static method isn't really a method, which is another name for a function of a class. It is more of a function <u>in</u> a class. This doesn't have information about the instance or the class. 
+A static method isn't really a method, which is another name for a function of a class. It is more of a function <u>in</u> a class. This doesn't have information about the instance or the class.
 
 ```python
 ClassName:
@@ -71,7 +71,7 @@ ClassName:
 	def static_method():
 		print("This is a static method.")
 
-		
+
 ClassName.static_method()
 
 >> This is a static method.
@@ -81,30 +81,30 @@ If you have a method that feels like it belongs in a certain class, even if it d
 
 ## Using @classmethod as a factory
 
-Sometimes, you might not want to use the `__init__()` method to create a new object. In the below example, you can create a new Train and create an object no matter what you pass as train_type, even if it isn't one of the types. 
+Sometimes, you might not want to use the `__init__()` method to create a new object. In the below example, you can create a new Train and create an object no matter what you pass as train_type, even if it isn't one of the types.
 
 ```python
 class Train:
 
 	types = ("Steam Train", "Maglev")
-	
+
 	def __init__(self, name, train_type, speed):
 		self.name = name
 		self.train_type = train_type
 		self.speed = speed
-	
+
 	def __repr__(self):
 		return f"<Train {self.name}, {self.train_type}, {self.speed}kph>"
-	
+
 	@classmethod
 	def steam_train(cls, name, speed):
 		return cls(name, cls.types[0], speed)
-	
+
 	@classmethod
 	def maglev(cls, name, speed):
 		return cls(name, cls.types[1], speed)
 
-	
+
 new_steam_train = Train.steam_train("Line 17", 70)
 new_maglev = Train.maglev("Line 501", 500)
 
@@ -117,7 +117,7 @@ print(new_maglev)
 >> <Train Line 501, Maglev, 500kph>
 ```
 
-Of course, you can also use an `if statement` to make sure it is an allowed type, but you can also use a class method to call the class itself and to pass an accepted type in right away. 
+Of course, you can also use an `if statement` to make sure it is an allowed type, but you can also use a class method to call the class itself and to pass an accepted type in right away.
 
 # Building your own Decorators
 
@@ -125,10 +125,10 @@ Now that you are familiar with the built-in decorators, here's how to make your 
 
 ## Simple Decorators
 
-To make our decorator, we will be defining a function inside a function. The outer function acts as the decorator, the inner function is the function replacing whatever function is passed into the decorator. The below example shows how you can add some security functionality to an existing function: 
+To make our decorator, we will be defining a function inside a function. The outer function acts as the decorator, the inner function is the function replacing whatever function is passed into the decorator. The below example shows how you can add some security functionality to an existing function:
 
 ```python
-# make_secure() is the decorator, while secure_function() is what is replacing func. 
+# make_secure() is the decorator, while secure_function() is what is replacing func.
 # make_secure() adds functionality to func which (cont in next comment...)
 def make_secure(func):
 	def secure_function():
@@ -255,7 +255,7 @@ You will need to use this on every decorator that you write.
 
 ## Decorating functions with parameters
 
-Sometimes, the function you want to decorate has parameters. Lets say you have: 
+Sometimes, the function you want to decorate has parameters. Lets say you have:
 
 ```python
 def root_login(department):
@@ -294,7 +294,7 @@ def make_secure(func):
 	return secure_function
 ```
 
-Doing this yields the expected result: 
+Doing this yields the expected result:
 
 ```python
 root_login('finance')
@@ -313,7 +313,7 @@ This part is pretty weird, and a bit complicated. Lets say you want to want to h
 ```python
 def root_login():
 	print(f"Admin {user['name']} has logged into root successfully.")
-  
+
 def regular_login():
   print(f"User {user['name']} has logged in successfully.")
 ```
@@ -394,6 +394,6 @@ regular_login()
 
 # Conclusion
 
-This wraps up what I learned about decorators. To be honest, some of this stuff is pretty complicated and I still don't think I can use this without referring back to my blog later. I hope this helps somebody out there who is trying to learn about decorators. 
+This wraps up what I learned about decorators. To be honest, some of this stuff is pretty complicated and I still don't think I can use this without referring back to my blog later. I hope this helps somebody out there who is trying to learn about decorators.
 
 See ya on my next blog/series!

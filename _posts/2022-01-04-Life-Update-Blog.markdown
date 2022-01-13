@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Life Update"
-date:   2022-01-04 23:00:00 -0500
+date: 2022-01-04 23:00:00 -0500
 categories: Life
 comments: true
 typora-root-url: ..
