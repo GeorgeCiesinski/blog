@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Life Update"
+title: "Life Update"
 date: 2022-01-04 23:00:00 -0500
 categories: Life
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Learning Jinja Templates"
+title: "Learning Jinja Templates"
 date: 2022-01-06 23:00:00 -0500
 categories: Bootstrap Flask Front-end Programming Text-Script
 comments: true
@@ -17,27 +17,29 @@ Woah, I'm on a real roll! This marks the third day in a row I am blogging. Truth
 
 A jinja template is stored in a file that can be called anything. For example, a template for the index page can be called `index.html` or even `index.jinja` as this is not a true html file, but a html  like template.
 
-This template primarily uses the same syntax as an html file. In addition to html, you can also use jinja code. I will not go too in depth as the jinja documents do a far better job than I ever could, but you can get an idea of the basics below:
+This template primarily uses the same syntax as an html file. In addition to html, you can also use jinja code. I will not go too in depth as the jinja documents do a far better job than I ever could, but you can get an idea of the basics below.
 
-`{% command %}` - Curly brackets with % represent a jinja command. Some commands require a start and end block like this:
+Note: I have included a space between the brackets and the following characters because Jekyll is written with Jinja, and including Jinja commands breaks the blog. There should be no space in the below examples.
+
+`{ % command % }` - Curly brackets with % represent a jinja command. Some commands require a start and end block like this:
 
 ```
-{% block block_name %}
+{ % block block_name % }
   (do stuff)
-{% block %}
+{ % block % }
 ```
 
-`{{ input }}` - Double curly brackets represent an input. This executes the code inside the curly brackets and inputs the result into the html. It can be used to determine the url for example:
+`{ { input } }` - Double curly brackets represent an input. This executes the code inside the curly brackets and inputs the result into the html. It can be used to determine the url for example:
 
 ```html
-<a href="{{ url_for('checkout.payment_form') }}"> Link </a>
+<a href="{ { url_for('checkout.payment_form') } }"> Link </a>
 ```
 
-`{# Comment #}` - Curly brackets with # represent a comment.
+`{ # Comment # }` - Curly brackets with # represent a comment.
 
 # Additional Jinja Commands
 
-`{% include 'jinja_template.html' %}` - The include command can be used to inject another jinja template. In the below example, we are including the content in `head.html` within `index.html`:
+`{ % include 'jinja_template.html' % }` - The include command can be used to inject another jinja template. In the below example, we are including the content in `head.html` within `index.html`:
 
 ```html
 <!-- head.html -->
@@ -53,9 +55,9 @@ This template primarily uses the same syntax as an html file. In addition to htm
 </head>
 ```
 
-`{% extends jinja_template %}` - Creates a child template of another template. This requires the block command.
+`{ % extends jinja_template % }` - Creates a child template of another template. This requires the block command.
 
-`{% block block_name %}` - Creates a block with html/jinja code. Requires `{% end block %}` at the end.
+`{ % block block_name % }` - Creates a block with html/jinja code. Requires `{ % end block % }` at the end.
 
 This allows you to modify a parent template using content from a child template:
 
@@ -81,12 +83,12 @@ This allows you to modify a parent template using content from a child template:
 {% end block %}
 ```
 
-`{% for item in items %}` - Creates a for loop and executes the following code. Requires `{% endfor %}`:
+`{ % for item in items % }` - Creates a for loop and executes the following code. Requires `{ % endfor % }`:
 
 ```
-{% for order in orders %}
+{ % for order in orders % }
   (do stuff)
-{% endfor %}
+{ % endfor % }
 ```
 
 # Rendering Jinja Templates
@@ -106,9 +108,9 @@ In the jinja_template you are rendering, you can use the variable normally:
 
 
 ```
-{% for order in orders %}
+{ % for order in orders % }
   (do stuff)
-{% endfor %}
+{ % endfor % }
 ```
 
 # Conclusion
