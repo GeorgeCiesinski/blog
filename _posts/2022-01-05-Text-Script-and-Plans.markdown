@@ -2,7 +2,7 @@
 layout: single
 title: "Text-Script and Plans for the Future"
 date: 2022-01-05 23:00:00 -0500
-categories: Bootstrap Programming Python Text-Script
+categories: Bootstrap Programming Python Text-Script SimiDex
 comments: true
 typora-root-url: ..
 ---
@@ -15,7 +15,7 @@ Today, I am starting a new series on an upcoming project I have been planning to
 
 # The Birth of Text-script
 
-Well, I ended up being successful and wrote an app called "Text-Script", and after a few versions, I halted development on this app as it did the job well, and I wanted to move onto another project. I shared this app with my L1 team as well as our L2 team and was happy to see that many people found uses for it. My team uses it to this day, and I have had people approach me to share their statistics from the app to show me how much time it saved them. I [shared my project on Github](https://github.com/GeorgeCiesinski/text-script) and was very happy to see that it accumulated 74 stars, which was a great accomplishment for a fledgeling developer as myself. Despite this, the app is actually.... pretty bad. In utility, it works exactly as I intended, but there is no GUI and it outputs all of the statistics and relevant data to a console. The settings had to be manually changed in a `.ini` file, and the individual "text blocks" had to be stored in `.txt` files named `#shortcut` where the actual shortcut would be whatever shortcut you wanted to type after the pound key. There was also no way to change the pound prefix to something else, because it was hard coded. I will give myself some credit though because through sheer coincidence, it turned out that saving a folder with these text blocks in a google drive or onedrive folder allowed you to keep a central text block repository that could be updated, and all of the agents with access to this folder would have their version automatically update to include any new text blocks.
+Well, I ended up being successful and wrote an app called "Text-Script", and after a few versions, I halted development on this app as it did the job well, and I wanted to move onto another project. I shared this app with my L1 team as well as our L2 team and was happy to see that many people found uses for it. My team uses it to this day, and I have had people approach me to share their statistics from the app to show me how much time it saved them. I [shared my project on Github](https://georgeciesinski.me/text-script/) and was very happy to see that it accumulated 74 stars, which was a great accomplishment for a fledgeling developer as myself. Despite this, the app is actually.... pretty bad. In utility, it works exactly as I intended, but there is no GUI and it outputs all of the statistics and relevant data to a console. The settings had to be manually changed in a `.ini` file, and the individual "text blocks" had to be stored in `.txt` files named `#shortcut` where the actual shortcut would be whatever shortcut you wanted to type after the pound key. There was also no way to change the pound prefix to something else, because it was hard coded. I will give myself some credit though because through sheer coincidence, it turned out that saving a folder with these text blocks in a google drive or onedrive folder allowed you to keep a central text block repository that could be updated, and all of the agents with access to this folder would have their version automatically update to include any new text blocks.
 
 # Text-Script 2.0
 
