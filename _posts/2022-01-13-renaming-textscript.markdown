@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Finding a Name for TextScript"
+title: "Finding a New Name for TextScript"
 date: 2022-01-13 23:00:00 -0500
 categories: Programming Text-Script SimiDex
 comments: true
