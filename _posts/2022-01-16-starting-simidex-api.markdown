@@ -19,7 +19,7 @@ This said, I am also facing lots of challenges on this project already. I have t
 
 # Flask RESTful API
 
-SimiDex's API is going to be built using Flask, Flask-RESTful, Flask-SQLAlchemy, and a number of other Flask extensions.
+SimiDex's API is going to be built using Flask, Flask-RESTful, Flask-SQLAlchemy, and a number of other Flask extensions. I am using a bunch of libraries and utilities to build the API, so as opposed to breaking down every script, I wanted to list the libraries and utilities used, and describe them below.
 
 ## What is Flask
 
@@ -43,7 +43,7 @@ Flask-RESTful is an extension for Flask that adds support to quickly build **RES
 
 ### API
 
-An API is an Application Point Interface. It is a set of definitions and protocols for building and integrating application software. It establishes the content required from the consumer or client (request) and the content required by the producer (response).
+An API is an **A**pplication **P**oint **I**nterface. It is a set of definitions and protocols for building and integrating application software. It establishes the content required from the consumer or client (request) and the content required by the producer (response).
 
 ### REST
 
@@ -51,7 +51,7 @@ An API is an Application Point Interface. It is a set of definitions and protoco
 
 ### JSON
 
-JavaScript Object Notation is a file format, or syntax, which despite it's name is language agnostic. This means that it is used in applications written in many different languages, and not necessarily in JavaScript.
+**J**ava**S**cript **O**bject **N**otation is a file format, or syntax, which despite it's name is language agnostic. This means that it is used in applications written in many different languages, and not necessarily in JavaScript.
 
 ## What is Flask-SQLAlchemy
 
@@ -59,18 +59,65 @@ Flask-SQLAlchemy is a Flask extension that adds SQLAlchemy support to Flask appl
 
 ### SQLAlchemy
 
-SQLAlchemy is a Python SQL toolkit and Object Relational Mapper that gives applications the full power and flexibility of SQL. It allows you to access tables as if they were classes, and lets you get and store items as if they were objects, which is great for an object oriented language like Python.
+SQLAlchemy is a Python SQL toolkit and Object Relational Mapper (ORM) that gives applications the full power and flexibility of SQL. It allows you to access tables as if they were classes, and lets you get and store items as if they were objects, which is great for an object oriented language like Python.
 
 ### SQL
 
-Structured Query Language is a programming language designed for managing data in a relational database. It has been around since 1970, and now, 50 years later, is the most common method of accessing data in databases. There are many different SQL systems, such as PostgreSQL, SQLite3, and MySQL.
+**S**tructured **Q**uery **L**anguage is a programming language designed for managing data in a relational database. It has been around since 1970, and now, 50 years later, is the most common method of accessing data in databases. There are many different SQL systems, such as PostgreSQL, SQLite3, and MySQL.
 
 ### Relational database
 
 A relational database is a type of database that stores and provides data points related to one another. For example, items in an items table might be stored by a specific user in the users table. In a relational database, each row in the table is a record with a unique ID called a key.
 
-## What is flask-JWT
+## What is Flask-JWT
+
+Adds basic JWT features to flask applications. This can be used to protect some resources and methods so that a token is required to access those methods.
+
+It automatically creates an `/auth` resources, and POST requests which accept JSON content like:
+
+```
+{
+  "username": "name",
+  "password": "pass"
+}
+```
+
+and returns a token that looks like:
+
+```
+{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIzMDQyODYsImlhdCI6MTY0MjMwMzk4NiwibmJmIjoxNjQyMzAzOTg2LCJpZGVudGl0eSI6MX0.OK9oDWBf8cs0uO8S15ms5usXUIiLPG0DoMe1BG8SzWs"
+}
+```
+
+### JWT
+
+**J**son **W**eb **T**oken is a proposed internet standard for creating data with an optional signature and optional encryption.
+
+The server generates a token which can contain an identity and provides it to the client.
 
 ### authenticate & identity
 
+The Flask-JWT library requires authenticate and identity functions to be created in the application. The authenticate function takes a username and password and verifies it against the databse. Upon verification, it provides a token to the client. The identity function returns something like the user id or the user object. Any requests the client would make can contain this token, which also holds the client's identity information.
+
 ### hmac
+
+Keyed-**H**ash **M**essage **A**uthentication **C**ode is a type of message authentication code (MAC) involving a cryptographic hash function and secret cryptographic key. it can be used to simultaneously verify the data integrity and authenticity of a message.
+
+SimiDex uses the `hmac.compare_digest()` function as this function takes two arguments, and safely compares them. Normally if you check if a string is equal to another string, such as comparing two passwords, this would take the interpreter a certain amount of time depending on the number and kinds of characters. A skilled hacker can attempt different passwords and time the response to eventually determine the correct password. `compare_digest()` does the comparison in a way that takes an arbitrary amount of time and makes this crack method much more difficult if not impossible.
+
+```
+user = UserModel.find_by_username(username)
+
+	# Compares two strings safely
+	if user and hmac.compare_digest(user.password, password):
+		return user
+```
+
+# Conclusion
+
+So I think that about wraps it up for now. As this API grows, there will probably be more libraries and utilities I'll need to bring into the project, but this should be enough to build a basic functioning API.
+
+I'm hoping to make the next blog about the front-end development as I want to build the most basic parts of each component of SimiDex before building out each component fully. This way, I can ensure these components work together as expected before it becomes a complicated project and needs a large rewrite.
+
+I hope this was an enjoyable read. See you next time!
