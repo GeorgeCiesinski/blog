@@ -115,7 +115,7 @@ I felt that I was getting closer.
 
 I was convinced this was the one. I imagined a logo that looks like a minimalistic version of the macaco selfie:
 
-![Macaco Selfie](/assets/images/SimiDex/Macaco.jpg)
+![Macaco-Selfie](/assets/images/SimiDex/Macaco.jpg)
 
 I ran this by my friend and she said she liked it, but suggested a more serious name:
 
