@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Designing the Textblock model - Part 1"
+title: "Designing the Textblock model"
 date: 2022-01-16 23:00:00 -0500
 categories: Programming SimiDex Flask
 comments: true
@@ -74,10 +74,4 @@ class UserRegister(Resource):
 
 In the above example, we are using the `UserModel.find_by_username()` class method to look for a User. Later in the example, we create a new user object by simply doing `user = UserModel(**kwargs)`. Once it is created, you can simply call `user.save_to_db()` and that created object is then committed to the database.
 
-This is the power of Flask-SQLAlchemy.
-
-# Conclusion
-
-I wanted to wrap this post up as the first part of my series on designing Flask-SQLAlchemy models. I'm planning to make a Part-2 about relationships and foreign keys, and a Part-3 about applying the concepts I've covered so far.
-
-I hope you enjoy this series. Until next time!
+This is the power of Flask-SQLAlchemy. 
