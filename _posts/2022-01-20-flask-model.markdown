@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Designing the Textblock model - Part 1"
+title: "Flask Model"
 date: 2022-01-16 23:00:00 -0500
 categories: Programming SimiDex Flask
 comments: true
@@ -78,6 +78,6 @@ This is the power of Flask-SQLAlchemy.
 
 # Conclusion
 
-I wanted to wrap this post up as the first part of my series on designing Flask-SQLAlchemy models. I'm planning to make a Part-2 about relationships and foreign keys, and a Part-3 about applying the concepts I've covered so far.
+Originally I had written this blog post as part of a three part series, but more recently while working on other projects I came across some topics I wanted to talk about more. In the future I will talk more about Flask-SQLAlchemy, but I'm going to wrap this post up here.
 
-I hope you enjoy this series. Until next time!
+Until next time!
