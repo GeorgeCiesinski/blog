@@ -13,6 +13,8 @@ Hello world. It has been a few months since my last blog post, and a lot of chan
 
 The move was pretty challenging on the other hand. I had a bad idea and thought it would be smart to move all the small things a few days early, then rent a small cargo van to move the big stuff. On the day I was moving the big stuff, my entire body was in pain and I barely finished on time. To make matters worse one of our neighbours stole my cat tree! After this, I spent an entire month moving small stuff that wasn't moved before. Either way, long story short, I decided to hire movers in the future.
 
+I also think it is important to mention the war in Ukraine. Shortly after my move, the war broke out and consumed much of my free time as I was trying to learn about the conflict and deal with the depression comes with war media consumption. To make a long story short, the videos of the suffering and wholesale destruction of a cities that look like my own took me some time to get over, and I found that I felt more worn out than usual. I realized how lucky I am to live in a stable and relatively peaceful country despite still facing many domestic issues here.
+
 Anyways, onto my long overdue blog post!
 
 # What is CSS
