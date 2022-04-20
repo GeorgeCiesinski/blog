@@ -1,0 +1,64 @@
+---
+layout: single
+title: "Testing the Microsoft Hololens"
+date: 2022-04-19 23:00:00 -0500
+categories: Tech
+comments: true
+typora-root-url: ..
+---
+
+# Life Update
+
+Hello world, I haven't had the chance to write a blog in almost a month so I wanted to release a quick one. I have been feeling a bit burned out from working my full time job, and programming. I have taken a couple of weeks off of work to catch up with stuff I fell behind on, including maintaining my car, taxes, and updating personal projects so that I am ready to submit job applications.
+
+My room mates all have come down with Covid as well during this time, so I have been isolating in my room trying to avoid it. Lucky for me, Elden Ring came out recently and it has been an amazing time. I think the developers created a master piece (as many others agree), especially when it comes to the world design and the grand architecture in the game. It is unlike anything I've seen in other games, so I feel very lucky to be playing games when this one came out.
+
+# Microsoft Hololens
+
+One of my room mates works in the IT support center in a local College, which decided to purchase several Microsoft Hololens units for testing. Employees were able to sign one out to test it and see if it would help them fulfill their work duties. My room mate signed one out and was nice enough to let me try it as well, so I wanted to talk about it in this blog post.
+
+Throughout this blog post I will be comparing it to my experiences with the Quest 2 Virtual Reality headset because it is the closest thing to the Hololens that I've tried, and I also think the two are very similar.
+
+## What is a Hololens
+
+In short, the Hololens is an augmented reality headset. As opposed to virtual reality which replaces the physical world with a virtual world using several high resolution screens, the Hololens has a transparent visor and microprojectors which project "holographic" images within the real world. In other words, you can walk from room to room, and the virtual objects you create remain where you placed them.
+
+## Similarities to Virtual Reality
+
+Similar to an Oculus Quest 2, the device has multiple cameras on it to view the depth of the room and objects in it, and can recognize your hands as virtual objects. This allows you to interact with the virtual objects using your hands.
+
+Another similarity to virtual reality is that you can experience something similar to virtual reality sickness when using it. For those who don't know, virtual reality sickness is similar to vertigo and comes with headaches and nausea for many first time users who don't have experience with virtual reality. This happens because the virtual world conflicts with your inner ear and other tools your body has to interpret it's orientation in the physical world. These sensors work with your vision to form a complete picture of where you are. When you are flying, moving around, or even doing acrobatics in virtual reality, your body's sensors disagree with what your eyes see, and as a result you have to remain aware that you are in two places at once - and this can be difficult for the brain. My first time using the Hololens resulted in very similar effects, namely eye fatigue and a headache that took some time to pass.
+
+## Differences from Virtual Reality
+
+The main difference of course is that the Hololens is meant to superimpose virtual objects in the physical world, while virtual reality is meant to immerse you in a virtual world. The main drawback of the Hololens is that the hologram quality is not that great for the price. Holograms do not appear 3 dimensional and do not seem to have much depth to them. These objects also have reflections on the lens that double or triple the image causing it to appear blurry. The images also appear transparent if the brightness is set too low, so the brightness needs to be set high for it to appear solid. The issue is that this disparity between the brightness of the holograms and the real world causes eye fatigue.
+
+Another difference is the utility. Most virtual reality headsets are designed for gaming currently, while augmented reality headsets aim to fulfill real world uses. For example, a modern fighter jet would use augmented reality to superimpose avionics and targetting information over the pilot's vision, and the Hololens is aimed at various other industries such as construction, engineering, healthcare, education, and interior design.
+
+## Controls
+
+The Hololens does not come with any physical controllers like the Quest 2 controllers and relies on observing your physical hands and superimposing virtual versions in the augmented reality. These hands simply do not work like the real thing. Gripping objects and hand gestures like pinching feel clumsy and fail more often than they succeed. It is difficult to have any kind of dexterity or accuracy because the virtual hands are simply approximating what you are trying to do.
+
+There is voice controls as well, although they require you to place a dot cursor on a button and then call out the button function. Cortana is present but difficult to use. You can't simply call out for Cortana and ask her to look something up or to do a task, or if there is, I could not figure out how to do it.
+
+In contrast, the Quest 2 has similar hand tracking and voice controls. While the hand tracking suffers from similar issues to the Hololens, the physical controllers more than make up for it, allowing you to have various interactions with virtual objects. The voice controls are far superior with a virtual assistant that performs various tasks for you such as opening apps, taking photos and videos.
+
+## Operating System
+
+The Hololens uses a Windows Mixed Reality OS similar to Windows 10. It has a start button and has all of the built in Windows favourites everyone wants to get rid of like Bing and Edge internet explorer. You can get apps on the Microsoft Store. The "start button" is a virtual button on your wrist, so you have to hold your wrist up and interact with it. This reminds me a lot about virtual reality games that have similar utilities on your wrists. It feels like having a far less featured version of vanilla Windows 10 augmented over reality and with very little to do.
+
+The setup is very long and annoying, and I find the Hololens lacking an out of box demo mode. In order to do anything, you have to go through a multistep process to sign into a microsoft account, agreeing to various diagnostics options, and various other setup steps. Any typing you have to do is done clumsily with your index fingers on a virtual keyboard. It is apparently possible to use your phone too, but I did not get this option and could not figure it out. If I could change anything, the Hololens should be able to perform some demo tasks once it is turned on with a message urging the user to complete the other steps when they have more time. 
+
+## Cost
+
+The Hololens costs between $3,500 - 5,500. This is incredibly cost prohibitive for most consumers, but not so much for a company. Compared to virtual reality, it is very expensive. I have used a $1500 Valve Index virtual reality headset and a $500 Quest 2 headset. Interestingly, the closest comparison is the cheaper Quest 2 because it shares similar features such as integrated room depth sensors and hand sensors. It is also wireless so you can walk room to room.
+
+All things considered, the Hololens is simply not worth the money. It is not a precision device and has functionality very similar to the $500 Quest 2. In fact, there is probably more to do for the Quest 2 considering you can not only buy apps on the Oculus store, but you can also play Steam apps, and other third party apps you can just download for free. The benefit of using the augmented reality simply does not provide enough utility for this price tag to be worth it.
+
+# Conclusion
+
+In short, my over all experience with the Hololens was underwhelming. I was expecting a lot more for the price, but it feels very basic and limited. I was blown away by the cost of the thing, and I think most people are better off getting a virtual reality headset to fulfill whatever purpose they need. Virtual reality is much more advanced as a concept than augmented reality currently is, and eventually I think augmented reality will be 100% worth it, but at it's current stage there is simply no way I would pay heaps of money for a mediocre product like the Hololens.
+
+# Future Blog Posts
+
+I want to get back into posting my blogs more frequently. I am currently having motivational problems which makes it very difficult to not only work on a project but to blog the process and results. I am trying to form better habits, and I hope I can post some informative blogs in the future about Front and back-end development. My current goal is to finish up two more front-end projects and a full-stack project I've had on the back burner for some time, so with any luck my next few blog posts will talk about these. As always, thank for dropping by and checking out my blog.
